@@ -1,0 +1,38 @@
+<div class="vh-100">
+  <app-navbar-incio></app-navbar-incio>
+  <h1 class="text-center mt-3">Bienvenido médico por favor ingrese los siguientes datos</h1>
+<form class="row g-3 needs-validation p-xxl-5" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Especialidad</label>
+    <input type="text" class="form-control" id="validationCustom01"  required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Costo de la especialidad</label>
+    <input type="text" class="form-control" id="validationCustom02"  required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">Horario</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Hora</option>
+      <option>8:00 a 9:00</option>
+      <option>9:00 a 10:00</option>
+      <option>11:00 a 12:00</option>
+      <option>13:00 a 14:00</option>
+      <option>14:00 a 15:00</option>
+      <option>15:00 a 16:00</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </div>
+</form>
+</div>
