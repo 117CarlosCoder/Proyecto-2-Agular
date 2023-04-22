@@ -1,0 +1,32 @@
+<div class="vh-100">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+    <div class="container-fluid w-75">
+      <a class="navbar-brand" href="/navbar-inicio">Consultora X</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <app-cerrar-sesion></app-cerrar-sesion>
+  </nav>
+  <h1 class="text-center mt-3">Bienvenido laboratorio por favor ingrese los siguientes datos</h1>
+  <form class="row g-3 needs-validation p-xxl-5" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Tipo de Examen</label>
+      <input type="text" class="form-control" id="validationCustom01"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Costo del examen</label>
+      <input type="text" class="form-control" id="validationCustom02"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Agregar</button>
+    </div>
+  </form>
+</div>
+

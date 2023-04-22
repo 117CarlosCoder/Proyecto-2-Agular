@@ -20,6 +20,11 @@ import { EspecialidadComponent } from './menus/menu-medico/especialidad/especial
 import { HistorialComponent } from './menus/menu-medico/historial/historial.component';
 import { ReportesMedicosComponent } from './menus/menu-medico/reportes-medicos/reportes-medicos.component';
 import { MenuIncioMedicoComponent } from './menus/menu-medico/menu-incio-medico/menu-incio-medico.component';
+import { MenuIncioAdminComponent } from './menus/menu-admin/menu-incio-admin/menu-incio-admin.component';
+import { MenuInicioPacienteComponent } from './menus/menu-paciente/menu-inicio-paciente/menu-inicio-paciente.component';
+import { MenuInicioLaboratorioComponent } from './menus/menu-laboratorio/menu-inicio-laboratorio/menu-inicio-laboratorio.component';
+import { RegistroComponent } from './registro/registro.component';
+import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,12 @@ import { MenuIncioMedicoComponent } from './menus/menu-medico/menu-incio-medico/
     EspecialidadComponent,
     HistorialComponent,
     ReportesMedicosComponent,
-    MenuIncioMedicoComponent
+    MenuIncioMedicoComponent,
+    MenuIncioAdminComponent,
+    MenuInicioPacienteComponent,
+    MenuInicioLaboratorioComponent,
+    RegistroComponent,
+    CerrarSesionComponent
   ],
   imports: [
     BrowserModule,

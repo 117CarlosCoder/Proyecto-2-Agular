@@ -1,0 +1,87 @@
+<app-navbar-incio></app-navbar-incio>
+<h1 class="text-center mt-3 ">Por favor llene todos los campos</h1>
+<div class="d-flex justify-content-center mt-5 mb-5">
+    <form class="row g-3 needs-validation w-50 border border-primary border-3 rounded-2 p-xxl-5" (ngSubmit) = "enviarDatos()" >
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" id="validationCustom01" [(ngModel)]="usuario.nombre" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Nombre Usuario</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" name="nombreU"  class="form-control" id="validationCustomUsername" [(ngModel)]="usuario.nombre_usuario" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom01" class="form-label">Contraseña</label>
+        <input type="password" name="password" class="form-control" id="validationCustom041" [(ngModel)]="usuario['contraseña']" required placeholder="*********">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-7">
+        <label for="validationCustom03" class="form-label">Direccion</label>
+        <input type="text" name="direccion"  class="form-control" [(ngModel)]="usuario.direccion" id="validationCustom03" required>
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-7">
+        <label for="validationCustom03" class="form-label">Correo Electrónico</label>
+        <input type="email" name="email"  class="form-control" [(ngModel)]="usuario.correo" id="validationCustom054" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-md-7">
+        <label for="validationCustom03" class="form-label">CUI</label>
+        <input type="number" name="cui" class="form-control" [(ngModel)]="usuario.cui" id="validationCustom0543" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <label for="validationCustom03" class="form-label">Fecha de nacimiento</label>
+        <input type="date" name="date"  class="form-control" [(ngModel)]="usuario.fecha_nacimiento" id="validationCustom054q33" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <fieldset class="row mb-3 mt-5">
+        <legend class="col-form-label col-sm-2 pt-0">Tipo de Usuario</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" [(ngModel)]="usuario.tipo" value="Paciente" >
+            <label class="form-check-label" for="gridRadios1">
+              Paciente
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" [(ngModel)]="usuario.tipo" value="Médico">
+            <label class="form-check-label" for="gridRadios2">
+              Médico
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" [(ngModel)]="usuario.tipo" value="Laboratorio" >
+            <label class="form-check-label" for="gridRadios3">
+              Laboratorio
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Registrar</button>
+      </div>
+    </form>
+</div>
+
+

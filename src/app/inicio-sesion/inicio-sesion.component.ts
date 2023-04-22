@@ -25,20 +25,19 @@ export class InicioSesionComponent {
 
   onSubmit() {
     console.log(this.usuario.correo)
-    const jsonCredenciales = JSON.stringify(this.usuario);
-    this.http.post('http://localhost:8080/apirest_war_exploded/usuarios', jsonCredenciales, { responseType: 'json'}).subscribe(
+    const jsonCredenciales = this.usuario;
+    this.http.post('http://localhost:8080/apirest_war_exploded/usuarios/iniciar', jsonCredenciales, { responseType: 'json'}).subscribe(
       (respuesta: any) => {
         console.log(respuesta);
 
         const tipo = respuesta['tipo'];
         const valor = respuesta['valor'];
         if (valor && tipo === 'Paciente') {
-          // Redirigir a la página de inicio de usuario
-          this.router.navigate(['/navbar-paciente']);
+          this.router.navigate(['/menu-paciente']);
         }
         if (valor && tipo === 'Administrador') {
           // Redirigir a la página de inicio de usuario
-          this.router.navigate(['/navbar-admin']);
+          this.router.navigate(['/menu-admin']);
         }
         if (valor && tipo === 'Medico') {
           // Redirigir a la página de inicio de usuario
@@ -46,7 +45,7 @@ export class InicioSesionComponent {
         }
         if (valor && tipo === 'Laboratorio') {
           // Redirigir a la página de inicio de usuario
-          this.router.navigate(['/navbar-laboratorio']);
+          this.router.navigate(['/menu-inicio-laboratorio']);
         }
 
         // La respuesta del servidor se ha recibido correctamente
