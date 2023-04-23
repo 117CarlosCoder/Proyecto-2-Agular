@@ -7,20 +7,35 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./menu-incio-medico.component.css']
 })
 export class MenuIncioMedicoComponent implements  OnInit {
-  especialidad = {
-    costo:'',
-    nombre:'',
-    descripcion:''
-  };
+  horauno :string = '';
+  horados :string = '';
+
+  horas: string = '';
+
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
+    this.horauno = '';
+    this.horados = '';
+    this.horas = '';
     this.inicializarDatos();
   }
+  especialidad = {
+    costo:'',
+    nombre:'',
+    descripcion:'',
+    hora: ''
+  };
 
+  enviarHoras() {
+    this.horas = this.horauno + " - " + this.horados;
+    this.especialidad.hora = this.horas;
+    this.inicializarDatos();
+  }
   inicializarDatos(): void {
+
     this.http.get('http://localhost:8080/apirest_war_exploded/medicos/especialidad', { responseType: 'text'}).subscribe(
       (respuesta: any) => {
         console.log('respuesta de carga ' + respuesta);
@@ -34,21 +49,20 @@ export class MenuIncioMedicoComponent implements  OnInit {
         if (respuesta == 'false') {
           this.mostrarInicioEspecialidad = true;
         }
-        // La respuesta del servidor se ha recibido correctamente
         console.log('respuesta de carga ' + respuesta);
       },
       (error) => {
-        // Ha ocurrido un error al enviar la solicitud al servidor
         console.error(error);
       }
     );
   }
 
   enviarEspecialidad() {
+    this.enviarHoras()
     console.log(this.especialidad.nombre)
     const jsonEspecialidad = this.especialidad;
     console.log(jsonEspecialidad)
-    this.http.post('http://localhost:8080/apirest_war_exploded/medicos/especialidad', jsonEspecialidad, { responseType: 'text'}).subscribe(
+    this.http.post('http://localhost:8080/apirest_war_exploded/medicos/especialidad',jsonEspecialidad, { responseType: 'text'}).subscribe(
       (respuesta: any) => {
         console.log(respuesta);
 
@@ -58,11 +72,9 @@ export class MenuIncioMedicoComponent implements  OnInit {
           this.cambiarEstado();
 
         }
-        // La respuesta del servidor se ha recibido correctamente
         console.log(respuesta);
       },
       (error) => {
-        // Ha ocurrido un error al enviar la solicitud al servidor
         console.error(error);
       }
     );

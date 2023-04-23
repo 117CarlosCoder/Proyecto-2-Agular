@@ -12,7 +12,7 @@
 
   <app-navbar-medico *ngIf="mostrarNavbarMedico"></app-navbar-medico>
 
-  <h1 class="text-center mt-3 " *ngIf="mostrarInicioEspecialidad" >Bienvenido médico por favor ingrese los siguientes datos</h1>
+  <h1 class="text-center mt-3 " *ngIf="mostrarNavbarInico" >Bienvenido médico por favor ingrese los siguientes datos</h1>
   <div class="d-flex  flex-column justify-content-center" *ngIf="mostrarNavbarInico">
     <form class="row g-3 needs-validation p-xxl-5 "novalidate>
       <h2>Especialidad</h2>
@@ -33,14 +33,14 @@
       <h2>Horario</h2>
       <div class="col-md-3">
         <label for="validationCustom02" class="form-label">Desde</label>
-        <input type="time" class="form-control" id="validationCustom012"  required>
+        <input type="time" name="hora1" class="form-control" id="validationCustom012" [(ngModel)]="horauno" required>
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
       <div class="col-md-3">
         <label for="validationCustom02" class="form-label">Hasta</label>
-        <input type="time" class="form-control" id="validationCustom0132"  required>
+        <input type="time" name="hora 2" class="form-control" id="validationCustom0132" [(ngModel)]="horados" required>
         <div class="valid-feedback">
           Looks good!
         </div>
