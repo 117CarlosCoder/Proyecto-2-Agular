@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-menu-incio-medico',
@@ -14,7 +13,7 @@ export class MenuIncioMedicoComponent implements  OnInit {
     descripcion:''
   };
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
