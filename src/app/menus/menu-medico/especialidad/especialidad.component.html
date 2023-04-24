@@ -6,13 +6,12 @@
 
     </div>
     <h1>Agregar Especialidad</h1>
-    <fieldset class="row mb-3 mt-5">
-      <h2>Especialidades</h2>
+    <fieldset class="row mb-3 mt-5" *ngFor="let especialidad of especialidad">
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Paciente" >
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="{{especialidad.nombre}}}" >
           <label class="form-check-label" for="gridRadios1">
-            Paciente
+            {{especialidad.nombre}}
           </label>
         </div>
       </div>
