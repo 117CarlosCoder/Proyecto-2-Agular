@@ -14,7 +14,6 @@ import { NavbarMedicoComponent } from './navbars/navbar-medico/navbar-medico.com
 import { NavbarPacienteComponent } from './navbars/navbar-paciente/navbar-paciente.component';
 import { NavbarLaboratorioComponent } from './navbars/navbar-laboratorio/navbar-laboratorio.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
-import { CompletarDatosComponent } from './menus/menu-medico/completar-datos/completar-datos.component';
 import { HorarioComponent } from './menus/menu-medico/horario/horario.component';
 import { EspecialidadComponent } from './menus/menu-medico/especialidad/especialidad.component';
 import { HistorialComponent } from './menus/menu-medico/historial/historial.component';
@@ -25,6 +24,7 @@ import { MenuInicioPacienteComponent } from './menus/menu-paciente/menu-inicio-p
 import { MenuInicioLaboratorioComponent } from './menus/menu-laboratorio/menu-inicio-laboratorio/menu-inicio-laboratorio.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
+import { ConsultaComponent } from './menus/menu-paciente/consulta/consulta.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,6 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
     NavbarPacienteComponent,
     NavbarLaboratorioComponent,
     InicioSesionComponent,
-    CompletarDatosComponent,
     HorarioComponent,
     EspecialidadComponent,
     HistorialComponent,
@@ -44,7 +43,8 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
     MenuInicioPacienteComponent,
     MenuInicioLaboratorioComponent,
     RegistroComponent,
-    CerrarSesionComponent
+    CerrarSesionComponent,
+    ConsultaComponent
   ],
   imports: [
     BrowserModule,

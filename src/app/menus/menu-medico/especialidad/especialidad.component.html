@@ -1,1 +1,32 @@
-<p>especialidad works!</p>
+<app-navbar-medico></app-navbar-medico>
+<div class="d-flex  flex-column justify-content-center">
+  <form class="row g-3 needs-validation p-xxl-5 "novalidate>
+    <h1>Especialidades Existentes</h1>
+    <div>
+
+    </div>
+    <h1>Agregar Especialidad</h1>
+    <fieldset class="row mb-3 mt-5">
+      <h2>Especialidades</h2>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Paciente" >
+          <label class="form-check-label" for="gridRadios1">
+            Paciente
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="col-md-3">
+      <label for="validationCustom0543" class="form-label">Costo</label>
+      <input type="number" name="cui" class="form-control" id="validationCustom0543" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" >Agregar</button>
+    </div>
+  </form>
+</div>
+
