@@ -10,6 +10,7 @@ import {HorarioComponent} from "./menus/menu-medico/horario/horario.component";
 import {EspecialidadComponent} from "./menus/menu-medico/especialidad/especialidad.component";
 import {HistorialComponent} from "./menus/menu-medico/historial/historial.component";
 import {ConsultaComponent} from "./menus/menu-paciente/consulta/consulta.component";
+import {ReportesComponent} from "./menus/menu-admin/reportes/reportes.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'especialidad', component: EspecialidadComponent},
   { path: 'historial', component: HistorialComponent},
   { path: 'consulta', component: ConsultaComponent},
-  { path: 'menu-inicio-paciente', component: MenuInicioPacienteComponent}
+  { path: 'menu-inicio-paciente', component: MenuInicioPacienteComponent},
+  { path: 'reportes-admin', component: ReportesComponent}
 
 
 ];

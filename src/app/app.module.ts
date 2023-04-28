@@ -25,6 +25,7 @@ import { MenuInicioLaboratorioComponent } from './menus/menu-laboratorio/menu-in
 import { RegistroComponent } from './registro/registro.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { ConsultaComponent } from './menus/menu-paciente/consulta/consulta.component';
+import { ReportesComponent } from './menus/menu-admin/reportes/reportes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { ConsultaComponent } from './menus/menu-paciente/consulta/consulta.compo
     MenuInicioLaboratorioComponent,
     RegistroComponent,
     CerrarSesionComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule,
