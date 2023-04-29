@@ -29,6 +29,8 @@ interface CargaEsp {
 export class EspecialidadComponent implements  OnInit{
 
   descripcionG: String ="";
+
+  nombre: string = "";
   especialidad: Especialidad[] = [] ;
   cargaespecialidad: CargaEsp[] = [] ;
   constructor(private http: HttpClient) {
