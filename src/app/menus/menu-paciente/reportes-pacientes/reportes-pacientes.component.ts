@@ -3,16 +3,15 @@ import {HttpClient} from "@angular/common/http";
 import {saveAs} from "file-saver-es";
 
 @Component({
-  selector: 'app-reportes',
-  templateUrl: './reportes.component.html',
-  styleUrls: ['./reportes.component.css']
+  selector: 'app-reportes-pacientes',
+  templateUrl: './reportes-pacientes.component.html',
+  styleUrls: ['./reportes-pacientes.component.css']
 })
-export class ReportesComponent {
+export class ReportesPacientesComponent {
   constructor(private http : HttpClient) {
   }
-
   descargaPdf(valor : string){
-    this.http.post('http://localhost:8080/apirest_war_exploded/reportes/reportes-administrador',valor,{responseType:"blob"}).subscribe(
+    this.http.post('http://localhost:8080/apirest_war_exploded/reportes/reportes-pacientes',valor,{responseType:"blob"}).subscribe(
       (blob: Blob) => {
         saveAs(blob, 'reporte.pdf');
       },

@@ -26,6 +26,9 @@ import { RegistroComponent } from './registro/registro.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { ConsultaComponent } from './menus/menu-paciente/consulta/consulta.component';
 import { ReportesComponent } from './menus/menu-admin/reportes/reportes.component';
+import { ReportesLaboratoriosComponent } from './menus/menu-laboratorio/reportes-laboratorios/reportes-laboratorios.component';
+import { ReportesPacientesComponent } from './menus/menu-paciente/reportes-pacientes/reportes-pacientes.component';
+import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,10 @@ import { ReportesComponent } from './menus/menu-admin/reportes/reportes.componen
     RegistroComponent,
     CerrarSesionComponent,
     ConsultaComponent,
-    ReportesComponent
+    ReportesComponent,
+    ReportesLaboratoriosComponent,
+    ReportesPacientesComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

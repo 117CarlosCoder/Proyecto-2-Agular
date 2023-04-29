@@ -11,6 +11,12 @@ import {EspecialidadComponent} from "./menus/menu-medico/especialidad/especialid
 import {HistorialComponent} from "./menus/menu-medico/historial/historial.component";
 import {ConsultaComponent} from "./menus/menu-paciente/consulta/consulta.component";
 import {ReportesComponent} from "./menus/menu-admin/reportes/reportes.component";
+import {ReportesPacientesComponent} from "./menus/menu-paciente/reportes-pacientes/reportes-pacientes.component";
+import {
+  ReportesLaboratoriosComponent
+} from "./menus/menu-laboratorio/reportes-laboratorios/reportes-laboratorios.component";
+import {ReportesMedicosComponent} from "./menus/menu-medico/reportes-medicos/reportes-medicos.component";
+import {ErrorComponent} from "./error/error.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
@@ -25,8 +31,10 @@ const routes: Routes = [
   { path: 'historial', component: HistorialComponent},
   { path: 'consulta', component: ConsultaComponent},
   { path: 'menu-inicio-paciente', component: MenuInicioPacienteComponent},
-  { path: 'reportes-admin', component: ReportesComponent}
-
-
+  { path: 'reportes-admin', component: ReportesComponent},
+  { path: 'reportes-pacientes', component: ReportesPacientesComponent},
+  { path: 'reportes-laboratorios', component: ReportesLaboratoriosComponent},
+  { path: 'reportes-medicos', component: ReportesMedicosComponent},
+  { path: '**', component: ErrorComponent}
 ];
 export const routing = RouterModule.forRoot(routes);

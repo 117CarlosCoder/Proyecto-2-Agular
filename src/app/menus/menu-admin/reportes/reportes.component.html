@@ -1,5 +1,14 @@
 <app-navbar-admin></app-navbar-admin>
-<button type="submit" class="btn btn-primary" (click)="descargaPdf('Porcentaje')">Descargar Porcentaje</button>
-<button type="submit" class="btn btn-primary" (click)="descargaPdf('Top5Medicos')">Descargar Top Medicos</button>
-<button type="submit" class="btn btn-primary" (click)="descargaPdf('Top5Laboratorios')">Descargar Top laboratorios</button>
-<button type="submit" class="btn btn-primary" (click)="descargaPdf('Totalingresos')">Descargar Total de ingresos</button>
+<div class="d-flex  flex-column justify-content-center mt-5 h-75">
+  <div class="w-50 p-5  flex-column">
+    <h1>Historial de Porcentajes</h1>
+    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)="descargaPdf('Porcentaje')">Descargar Porcentaje</button>
+    <h1>Top 5 Médicos</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Top5Medicos')">Descargar Top Medicos</button>
+    <h1>Top 5 Laboratorios</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Top5Laboratorios')">Descargar Top laboratorios</button>
+    <h1>Ingresos Registrados</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Totalingresos')">Descargar Total de ingresos</button>
+  </div>
+</div>
+

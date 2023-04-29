@@ -32,6 +32,7 @@ export class InicioSesionComponent {
 
         const tipo = respuesta['tipo'];
         const valor = respuesta['valor'];
+
         if (valor && tipo === 'Paciente') {
           this.router.navigate(['/menu-paciente']);
         }
@@ -47,6 +48,8 @@ export class InicioSesionComponent {
           // Redirigir a la página de inicio de usuario
           this.router.navigate(['/menu-inicio-laboratorio']);
         }
+
+
 
         // La respuesta del servidor se ha recibido correctamente
         console.log(respuesta);

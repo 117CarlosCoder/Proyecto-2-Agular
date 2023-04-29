@@ -1,0 +1,13 @@
+<app-navbar-laboratorio></app-navbar-laboratorio>
+<div class="d-flex  flex-column justify-content-center mt-5 h-75">
+  <div class="w-50 p-5  flex-column">
+    <h1>Historial Médico</h1>
+    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)="descargaPdf('HistorialMedico')">Descargar Historial</button>
+    <h1>Historial de recargas</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Saldo')">Descargar Historial Recargas</button>
+    <h1>Reporte de Consultas</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('ConsultasMedicas')">Descargar Consultas</button>
+    <h1>Reporte de Examenes</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('ExamenesMedicos')">Descargar Examenes</button>
+  </div>
+</div>

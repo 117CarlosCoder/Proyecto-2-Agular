@@ -1,1 +1,13 @@
-<p>reportes-medicos works!</p>
+<app-navbar-medico></app-navbar-medico>
+<div class="d-flex  flex-column justify-content-center mt-5 h-75">
+  <div class="w-50 p-5  flex-column">
+    <h1>Visualizar Saldo</h1>
+    <button type="submit" class="btn btn-primary mt-5 mb-5" (click)="descargaPdf('Saldo')">Descargar Saldo</button>
+    <h1>Top 5 Pacientes</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Top5Pacientes')">Descargar Top Pacientes</button>
+    <h1>Top 5 Especialidad</h1>
+    <button type="submit" class="btn btn-primary mb-5" (click)="descargaPdf('Top5Especialidades')">Descargar Top Especialidades</button>
+  </div>
+</div>
+
+
