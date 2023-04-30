@@ -117,6 +117,13 @@ export class EspecialidadComponent implements  OnInit{
   enviarEspecialidad() {
     console.log(this.especialidadmedico)
     const jsonEspecialidad = this.especialidadmedico;
+    const nombreEspecialidad = this.especialidadmedico.nombre;
+    const especialidadExistente = this.cargaespecialidad.find(especialidad => especialidad.nombre === nombreEspecialidad);
+  if (especialidadExistente) {
+    alert('El nombre de la especialidad ya existe');
+    return;
+  }
+
     console.log(jsonEspecialidad)
     this.http.post('http://localhost:8080/apirest_war_exploded/medicos/cargaespecialidad',jsonEspecialidad, { responseType: 'text'}).subscribe(
       (respuesta: any) => {
@@ -151,5 +158,6 @@ export class EspecialidadComponent implements  OnInit{
       }
     );
   }
+  
 
 }

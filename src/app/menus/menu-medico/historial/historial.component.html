@@ -1,9 +1,53 @@
 <app-navbar-medico></app-navbar-medico>
 <div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 ">
     <h1>Buscar paciente</h1>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+    <form class="d-flex" name="search" role="search" >
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (search)="onSearch($event)" name="searching" [(ngModel)]="id" >
+      <button class="btn btn-outline-success" type="submit" (click)="cargarPaciente()">Search</button>
     </form>
+    <h1 class="mt-5">Consultas</h1>
+    <table class="table-primary">
+      <thead>
+        <tr>
+          <th scope="col">Paciente</th>
+          <th scope="col">Fecha de Inicio</th>
+          <th scope="col">Fecha Final</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Medico</th>
+          <th scope="col">Especialidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cargarpaciente of cargarpaciente">
+          <th scope="row">{{cargarpaciente.paciente}}</th>
+          <td>{{cargarpaciente.fecha_inicio}}</td>
+          <td>{{cargarpaciente.fecha_fin}}</td>
+          <td>{{cargarpaciente.estado}}</td>
+          <td>{{cargarpaciente.medico}}</td>
+          <td>{{cargarpaciente.especialidad}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="mt-5">Examenes</h1>
+    <table class="table-primary">
+      <thead>
+        <tr>
+          <th scope="col">Paciente</th>
+          <th scope="col">Fecha de Solicitud</th>
+          <th scope="col">Fecha Final</th>
+          <th scope="col">Laboratorio</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cargarpacientexam of cargarpacientexam">
+          <th scope="row">{{cargarpacientexam.paciente}}</th>
+          <td>{{cargarpacientexam.fecha_solicitud}}</td>
+          <td>{{cargarpacientexam.fecha_fin}}</td>
+          <td>{{cargarpacientexam.laboratorio}}</td>
+          <td>{{cargarpacientexam.estado}}</td>
+        </tr>
+      </tbody>
+    </table>
 </div>
 

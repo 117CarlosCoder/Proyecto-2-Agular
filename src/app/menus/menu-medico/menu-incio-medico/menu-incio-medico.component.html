@@ -17,18 +17,21 @@
 
   <h1 class="text-center mt-3 " *ngIf="mostrarNavbarInico" >Bienvenido médico por favor ingrese los siguientes datos</h1>
   <div class="d-flex  flex-column justify-content-center" *ngIf="mostrarNavbarInico">
-    <form class="row g-3 needs-validation p-xxl-5 "novalidate>
+    <form class="row g-3 needs-validation p-xxl-5 " name="formulario"  novalidate>
       <h2>Especialidad</h2>
-      <div class="col-md-8">
-        <label for="validationCustom01" class="form-label">Especialidad</label>
-        <input type="text" name="especialidad" class="form-control" id="validationCustom01" [(ngModel)]="especialidad.nombre" required>
-        <div class="valid-feedback">
-          Looks good!
+      <div class="col-md-3" >
+        <label for="validationCustom04" class="form-label">Especialidades</label>
+        <select class="form-select" id="validationCustom04" name = "valor" [(ngModel)]="especialidad.nombre" required>
+          <option name="sinvalor" selected disabled >Especialidad</option>
+          <option name="especialidad" *ngFor="let especialidades of especialidades" [value]="especialidades.nombre" >{{especialidades.nombre}}</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
         </div>
       </div>
       <div class="col-md-8">
-        <label for="validationCustom02" class="form-label">Costo de la especialidad</label>
-        <input type="number" name="costo" class="form-control" id="validationCustom02" [(ngModel)]="especialidad.costo" required>
+        <label for="validationCustom02" class="form-label" >Costo de la especialidad</label>
+        <input type="number" name="numero" class="form-control" id="validationCustom02"  [(ngModel)]="especialidad.costo" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -49,7 +52,7 @@
         </div>
       </div>
       <div class="col-12">
-        <button class="btn btn-primary" type="submit" (click)="enviarEspecialidad()">Agregar</button>
+        <button id="btnEnviar" class="btn btn-primary" type="submit" name="especialidadEnviar" (click)="enviarEspecialidad()" >Agregar</button>
       </div>
     </form>
   </div>

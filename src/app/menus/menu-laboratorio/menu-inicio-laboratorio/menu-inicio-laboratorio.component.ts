@@ -69,10 +69,11 @@ export class MenuInicioLaboratorioComponent implements  OnInit{
 
   mostrarNavbarLab = false;
   mostrarNavbarInico = true;
-  mostrarInicioExamenlab = false;
+  mostrarInicioExamenlab = true;
 
   cambiarEstado() {
     this.mostrarNavbarInico = false;
     this.mostrarNavbarLab = true;
+    this.mostrarInicioExamenlab = false;
   }
 }
