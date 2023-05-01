@@ -10,6 +10,9 @@
   </nav>
 
   <app-navbar-laboratorio *ngIf="mostrarNavbarLab"></app-navbar-laboratorio>
+  <div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 " *ngIf="mostrarNavbarLab">
+    <h1>Bienvenido al Laboratorio</h1>
+</div>
 
   <h1 class="text-center mt-3" *ngIf="mostrarInicioExamenlab" >Bienvenido laboratorio por favor ingrese los siguientes datos</h1>
   <form class="row g-3 needs-validation p-xxl-5"  *ngIf="mostrarInicioExamenlab" novalidate>
