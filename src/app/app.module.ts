@@ -29,6 +29,7 @@ import { ReportesComponent } from './menus/menu-admin/reportes/reportes.componen
 import { ReportesLaboratoriosComponent } from './menus/menu-laboratorio/reportes-laboratorios/reportes-laboratorios.component';
 import { ReportesPacientesComponent } from './menus/menu-paciente/reportes-pacientes/reportes-pacientes.component';
 import { ErrorComponent } from './error/error.component';
+import { CargarDatosComponent } from './cargar-datos/cargar-datos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { ErrorComponent } from './error/error.component';
     ReportesComponent,
     ReportesLaboratoriosComponent,
     ReportesPacientesComponent,
-    ErrorComponent
+    ErrorComponent,
+    CargarDatosComponent
   ],
   imports: [
     BrowserModule,

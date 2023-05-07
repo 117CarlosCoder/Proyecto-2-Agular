@@ -1,14 +1,55 @@
 <app-navbar-paciente></app-navbar-paciente>
-<div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 ">
+<div class="d-flex  flex-row justify-content-center row g-3 needs-validation p-xxl-5 ">
   <h1>Asignar Consulta</h1>
   <div class="col-md-3">
     <label for="validationCustom04" class="form-label">Médicos</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
+      
+      
+    <select class="form-select" id="validationCustom04" [(ngModel)]="enviarMedico" required>
+      <option [ngValue]="null" selected >Selecionar</option>
+      <option *ngFor="let listarMedico of listarMedico" [value]="listarMedico.medico" required >{{
+        mostrarSoloMedicos ? listarMedico.especialidad + ' '+ listarMedico.medico : listarMedico.medico}}
+      </option>
     </select>
     <div class="invalid-feedback">
       Please select a valid state.
+    </div>
+    <h3>Horario</h3>
+    <div class="col-md-10">
+      <label for="validationCustom012" class="form-label">Desde</label>
+      <input type="time" name="hora1" class="form-control" id="validationCustom012"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-10">
+      <label for="validationCustom012" class="form-label">Hasta</label>
+      <input type="time" name="hora1" class="form-control" id="validationCustom012"  required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom046" class="form-label">Filtrar</label>
+    <select class="form-select" id="validationCustom04" [(ngModel)]="opcionSeleccionada" (ngModelChange)="mostrarMedicos()" required>
+      <option value="medico">Médico</option>
+      <option value="especialidad">Especialidad</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+    <div class="col-md-9">
+      <label for="fecha">Fecha:</label>
+      <div class="input-group">
+        <input class="form-control" id="fecha" name="fecha" ngbDatepicker #dp="ngbDatepicker">
+        <div class="input-group-append mt-3">
+          <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button">Seleccionar fecha</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary mt-5" type="submit" (click)="medicoSeleccionado()">Agregar</button>
     </div>
   </div>
 </div>

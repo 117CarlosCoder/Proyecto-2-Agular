@@ -143,7 +143,7 @@ export class EspecialidadComponent implements  OnInit{
     console.log(this.cambiarEspecialidad)
     const jsonEspecialidad = this.cambiarEspecialidad;
     console.log(jsonEspecialidad)
-    this.http.post('http://localhost:8080/apirest_war_exploded/medicos//cargaespecialidad-cambiarcosto',jsonEspecialidad, { responseType: 'text'}).subscribe(
+    this.http.post('http://localhost:8080/apirest_war_exploded/medicos/cargaespecialidad-cambiarcosto',jsonEspecialidad, { responseType: 'text'}).subscribe(
       (respuesta: any) => {
         console.log(respuesta);
         if (respuesta === 'true') {

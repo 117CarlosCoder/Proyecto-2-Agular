@@ -17,9 +17,11 @@ import {
 } from "./menus/menu-laboratorio/reportes-laboratorios/reportes-laboratorios.component";
 import {ReportesMedicosComponent} from "./menus/menu-medico/reportes-medicos/reportes-medicos.component";
 import {ErrorComponent} from "./error/error.component";
+import { CargarDatosComponent } from "./cargar-datos/cargar-datos.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
+  { path: '', redirectTo: 'cargar-datos', pathMatch: 'full' },
+  { path: 'cargar-datos', component: CargarDatosComponent },
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: 'menu-inicio-medico' , component: MenuIncioMedicoComponent},
   { path: 'menu-admin' , component: MenuIncioAdminComponent},

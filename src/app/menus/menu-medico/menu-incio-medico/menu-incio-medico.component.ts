@@ -79,7 +79,7 @@ export class MenuIncioMedicoComponent implements  OnInit {
 
         this.especialidades = JSON.parse(data);
 
-        /*his.paciente.id = respuesta['id'];
+        /*this.paciente.id = respuesta['id'];
         this.paciente.nombre = respuesta['nombre'];
         this.paciente.direccion = respuesta['direccion'];
         this.paciente.fechanamcimiento = respuesta['fecha_nacimiento'];*/
