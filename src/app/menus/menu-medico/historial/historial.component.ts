@@ -6,6 +6,8 @@ interface CargaPac {
   fecha_inicio : String;
   fecha_fin : String;
   estado : String;
+  porcentaje: number;
+  costo: number;
   medico: String;
   especialidad:String;
 }

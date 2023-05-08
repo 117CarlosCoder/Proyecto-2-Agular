@@ -74,13 +74,27 @@ export class CargarDatosComponent {
         console.log('Archivo enviado al servidor');
         console.log(formDatas);
         // Manejar la respuesta del servidor si es necesario
+       
+      }, error => {
+        console.error('Error al enviar el archivo al servidor', error);
+      });
+
+      this.http.post('http://localhost:8080/apirest_war_exploded/cargas/servicios', objetoJSON, {responseType: 'text'})
+      .subscribe(response => {
+        console.log('Archivo enviado al servidor cargas');
+        console.log(formDatas);
+        // Manejar la respuesta del servidor si es necesario
         setTimeout(() => {
           this.isLoading = false;
           this.router.navigate(['/inicio-sesion']);
         }, 2000);
       }, error => {
         console.error('Error al enviar el archivo al servidor', error);
+        this.isLoading = false;
+        alert("El archivo no es compatible")
       });
+
+
       }).catch((error) => {
         console.error('Error al leer el archivo:', error);
       });
