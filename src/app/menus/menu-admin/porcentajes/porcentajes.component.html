@@ -1,0 +1,31 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="d-flex flex-column g-3 needs-validation p-xxl-5">
+    <h1>Porcentaje Actual</h1>
+    <table class="table w-75">
+      <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">fecha</th>
+        <th scope="col">Porcentaje</th>
+      </tr>
+      </thead>
+  <tbody *ngFor="let porcentaje of porcentaje">
+      <tr>
+        <th scope="row">{{porcentaje.id}}</th>
+        <th >{{porcentaje.fecha}}</th>
+        <th >{{porcentaje.porcentaje}}</th>
+      </tr>
+      </tbody>
+  </table>
+    <h1>Cambiar Porcentaje</h1>
+    <div class="w-75 d-flex p-5 flex-row">
+    <div class="col-md-3 ">
+        <label for="validationCustom0543" class="form-label">Nuevo Porcentaje</label>
+        <input type="number" name="costo" class="form-control" id="validationCustom0543" [(ngModel)]="crearporcentaje.porcentaje" required>
+        <div class="invalid-feedback">
+          Por favor ingresa los datos
+        </div>
+    </div>
+    <button class="btn btn-primary mx-lg-3 h-50 " type="submit" (click)="crearPorcentaje()" >Cambiar</button>
+    </div>   
+</div>

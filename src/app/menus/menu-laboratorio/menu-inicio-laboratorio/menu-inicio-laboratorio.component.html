@@ -11,7 +11,23 @@
 
   <app-navbar-laboratorio *ngIf="mostrarNavbarLab"></app-navbar-laboratorio>
   <div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 " *ngIf="mostrarNavbarLab">
-    <h1>Bienvenido al Laboratorio</h1>
+    <div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 ">
+      <div class="w-100">
+          <h1>Bienvenido al laboratorio</h1>
+          <div class=" d-flex flex-row">
+              <div class="w-100">
+                  <img src="../../../../assets/Administrador.jpg" class="img-fluid ">
+              </div>
+              <div class="d-flex ms-3 justify-content-end aling-items-center flex-column w-50">
+                  <h2>Manual de usuario</h2>
+                  <div class="d-flex flex-column justify-content-center aling-items-center">
+                      <img src="../../../../assets/Documento.webp" class="mb-3" style="height: 100px; width: 100px;">
+                      <button class="w-50 btn btn-primary " type="submit" >Descargar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
   <h1 class="text-center mt-3" *ngIf="mostrarInicioExamenlab" >Bienvenido laboratorio por favor ingrese los siguientes datos</h1>

@@ -1,0 +1,49 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="d-flex  flex-column justify-content-center row g-3 needs-validation p-xxl-5 ">
+    <h1>Solicitud de Especialidades</h1>
+    <table class="table w-75">
+        <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Costo</th>
+          <th scope="col">Descripcion</th>
+        </tr>
+        </thead>
+    <tbody *ngFor="let cargaespecialidad of cargaespecialidad">
+        <tr>
+          <th scope="row">{{cargaespecialidad.id}}</th>
+          <th >{{cargaespecialidad.cui}}</th>
+          <td >{{cargaespecialidad.nombre}}</td>
+          <td >{{cargaespecialidad.descripcion}}</td>
+          <div class="col-12">
+        <button class="btn btn-primary mx-lg-3" type="submit" (click)="aceptarSolicitud(cargaespecialidad)">Aceptar</button>
+            <button class="btn btn-primary mx-lg-3" type="submit" (click)="eliminarSolicitud(cargaespecialidad)">Rechazar</button>
+          </div>
+        </tr>
+        </tbody>
+    </table>
+    <h1>Solicitud de tipos de examen</h1>
+    <table class="table w-75">
+        <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Costo</th>
+          <th scope="col">Descripcion</th>
+        </tr>
+        </thead>
+    <tbody *ngFor="let cargasexamen of cargasexamen">
+        <tr>
+          <th scope="row">{{cargasexamen.id}}</th>
+          <th>{{cargasexamen.cui}}</th>
+          <td>{{cargasexamen.nombre}}</td>
+          <td>{{cargasexamen.descripcion}}</td>
+          <div class="col-12">
+            <button class="btn btn-primary mx-lg-3" type="submit" (click)="aceptarSolicitudExamen(cargasexamen)">Aceptar</button>
+            <button class="btn btn-primary mx-lg-3" type="submit" (click)="eliminarSolicitudExamen(cargasexamen)">Rechazar</button>
+          </div>
+        </tr>
+        </tbody>
+    </table>
+</div>

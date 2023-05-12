@@ -11,12 +11,12 @@
         <th scope="col">Descripcion</th>
       </tr>
       </thead>
-      <tbody *ngFor="let cargaespecialidad of cargaespecialidad">
+      <tbody *ngFor="let cargaespecialidad of cargaespecialidad; let i = index; ">
       <tr>
         <th scope="row">{{cargaespecialidad.id}}</th>
         <td>{{cargaespecialidad.nombre}}</td>
         <td *ngIf="modificarCosto">{{cargaespecialidad.costo}}</td>
-        <td *ngIf="modificarCostoVisible">
+        <td *ngIf="modificarCostoVisible && i === selectedIndex">
           <div class="col-md-4 ">
           <input type="number" name="costo" class="form-control" id="validationCustom05423" [(ngModel)]="cambiarEspecialidad.costo" required>
             <div class="invalid-feedback">
@@ -26,9 +26,9 @@
         </td>
         <td>{{cargaespecialidad.descripcion}}</td>
         <div class="col-12">
-          <button class="btn btn-primary mx-lg-3" type="submit" *ngIf="modificarCosto" (click)="cambiarEstado()">Modificar</button>
+          <button class="btn btn-primary mx-lg-3" type="submit" *ngIf="modificarCosto" (click)="cambiarEstado(i)">Modificar</button>
           <button class="btn btn-primary mx-lg-3" type="submit" *ngIf="modificarCostoVisible" (click)="cancelarEstado()">Cancelar</button>
-          <button class="btn btn-primary mx-lg-3" type="submit" *ngIf="modificarCostoVisible" (click)="cambiarCosto()">Cambiar</button>
+          <button class="btn btn-primary mx-lg-3" type="submit" *ngIf="modificarCostoVisible && i === selectedIndex" (click)="cambiarCosto(cargaespecialidad)">Cambiar</button>
         </div>
       </tr>
       </tbody>

@@ -91,14 +91,18 @@ export class EspecialidadComponent implements  OnInit{
     );
   }
 
+  selectedIndex = -1;
+  
   modificarCosto = true;
   modificarCostoVisible = false;
-  cambiarEstado(){
+  cambiarEstado(index:number){
     this.modificarCosto = false;
     this.modificarCostoVisible = true;
+    this.selectedIndex = index;
   }
 
   cancelarEstado(){
+    this.selectedIndex = -1;
     this.modificarCosto = true;
     this.modificarCostoVisible = false;
   }
@@ -139,9 +143,14 @@ export class EspecialidadComponent implements  OnInit{
   }
 
 
-  cambiarCosto() {
-    console.log(this.cambiarEspecialidad)
-    const jsonEspecialidad = this.cambiarEspecialidad;
+  cambiarCosto(id: CargaEsp) {
+    this.selectedIndex = -1;
+    const jsonEspecialidad = this.cargaespecialidad.find(cargaespecialidad => cargaespecialidad.id === id.id);
+
+    if (jsonEspecialidad) {
+      jsonEspecialidad.costo = parseInt(this.cambiarEspecialidad.costo,10);
+    }
+     
     console.log(jsonEspecialidad)
     this.http.post('http://localhost:8080/apirest_war_exploded/medicos/cargaespecialidad-cambiarcosto',jsonEspecialidad, { responseType: 'text'}).subscribe(
       (respuesta: any) => {

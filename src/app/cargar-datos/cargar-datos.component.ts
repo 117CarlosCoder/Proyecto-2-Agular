@@ -16,7 +16,15 @@ export class CargarDatosComponent {
   }
 
   onFileSelected(event: any): void {
-    this.file = event.target.files[0];
+    try{
+      this.file = event.target.files[0];
+    }
+    catch (error) {
+      const invalidFeedback = document.querySelector('.invalid-feedback');
+        if (invalidFeedback) {
+          invalidFeedback.classList.add('d-block');
+        }
+    }
   }
   
 
@@ -29,7 +37,7 @@ export class CargarDatosComponent {
     }
   }*/
   submitForm() {
-    
+    try{
     const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
     if (fileInput.files && fileInput.files.length > 0) {
       this.isLoading = true;
@@ -44,8 +52,8 @@ export class CargarDatosComponent {
       const objetoJSON = JSON.parse(contenidoArchivo);
       resolve(objetoJSON);
       
-    };
-    fileReader.onerror = reject;
+    }
+    fileReader.onerror =reject;
   });
       /*if (this.file) {
         const formData = new FormData();
@@ -113,4 +121,12 @@ export class CargarDatosComponent {
       }
     }
   }
+
+  catch (error) {
+    this.router.navigateByUrl('/');
+    
+  }
+  
+}
+ 
 }
