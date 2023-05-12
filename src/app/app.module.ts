@@ -32,6 +32,7 @@ import { ErrorComponent } from './error/error.component';
 import { CargarDatosComponent } from './cargar-datos/cargar-datos.component';
 import { SolicitudesComponent } from './menus/menu-admin/solicitudes/solicitudes.component';
 import { PorcentajesComponent } from './menus/menu-admin/porcentajes/porcentajes.component';
+import { RecargaComponent } from './menus/menu-paciente/recarga/recarga.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { PorcentajesComponent } from './menus/menu-admin/porcentajes/porcentajes
     ErrorComponent,
     CargarDatosComponent,
     SolicitudesComponent,
-    PorcentajesComponent
+    PorcentajesComponent,
+    RecargaComponent
   ],
   imports: [
     BrowserModule,

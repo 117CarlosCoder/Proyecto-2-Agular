@@ -20,6 +20,7 @@ import {ErrorComponent} from "./error/error.component";
 import { CargarDatosComponent } from "./cargar-datos/cargar-datos.component";
 import { SolicitudesComponent } from "./menus/menu-admin/solicitudes/solicitudes.component";
 import { PorcentajesComponent } from "./menus/menu-admin/porcentajes/porcentajes.component";
+import { RecargaComponent } from "./menus/menu-paciente/recarga/recarga.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'cargar-datos', pathMatch: 'full' },
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'reportes-medicos', component: ReportesMedicosComponent},
   { path: 'solicitudes-admin', component: SolicitudesComponent},
   { path: 'porcentaje', component: PorcentajesComponent},
+  { path: 'recargar', component: RecargaComponent},
   { path: '**', component: ErrorComponent}
 ];
 export const routing = RouterModule.forRoot(routes);

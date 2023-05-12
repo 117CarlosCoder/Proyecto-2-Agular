@@ -1,0 +1,16 @@
+<app-navbar-paciente></app-navbar-paciente>
+<div class="d-flex  flex-column justify-content-center mt-5 h-75">
+  <div class="w-50 p-5  flex-column">
+    <h1>Recarga Actual</h1>
+    <h2>Saldo : {{recarga.saldo}}</h2>
+    <h1 class="mt-5">Recargar</h1>
+    <div class="col-md-3 d-flex flex-column  mt-3">
+        <input type="number" name="costo" class="form-control" id="validationCustom0543" [(ngModel)]="enviarecarga.saldo" required>
+        <div class="invalid-feedback">
+          Por favor ingresa los datos
+        </div>
+    </div>
+    <button class="btn btn-primary mt-3 " type="submit" (click)="enviarRecarga()">Recargar</button>
+  </div>
+</div>
+
